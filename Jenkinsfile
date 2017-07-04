@@ -29,6 +29,7 @@ pipeline
 		stage('test')
 		{
 			node('master')
+			steps
 			{
 				echo 'test'
 			}
@@ -36,6 +37,7 @@ pipeline
 		stage('archieve')
 		{
 			node('master')
+			steps
 			{
 				archiveArtifacts '%workspace%\\results\\*'
 
@@ -44,6 +46,7 @@ pipeline
 		stage('deploy')
 		{
 			node('master')
+			steps
 			{
 				echo 'deploy'    
 			}
